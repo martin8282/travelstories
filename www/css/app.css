@@ -1,44 +1,83 @@
 body {
-    margin: 0;
-    padding: 0;
-    width: auto;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 90px;
+  min-width: 100%;
+  background: transparent url("../img/texture.png") repeat-x 0 100%;
 }
 
 .frame {
-    position: absolute;
-    background-color: white;
-    min-width: 100%;
-    z-index: 0;
+  position: absolute;
+  background-color: white;
+  min-width: 100%;
+  z-index: 0;
+  font-size: 1.5rem;
 }
 
 .frame.moving {
-    left: 100%;
-    overflow: hidden;
-    z-index: 10;
-    -webkit-box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.4);
-    -moz-box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.4);
-    box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.4);
+  left: 100%;
+  overflow: hidden;
+  z-index: 10;
+  -webkit-box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 .frame.moving .navbar {
-    position: absolute;
+  position: absolute;
+}
+
+.frame.moving .footer {
+  position: absolute;
 }
 
 .frame.current {
-    left: 0;
-    z-index: 10;
-    border: none;
+  left: 0;
+  z-index: 10;
+  border: none;
 }
 
 .frame.hidden {
-    left: 200%;
-    display: none;
+  left: 200%;
+  display: none;
+}
+
+.container {
+  font-size: 100%;
 }
 
 .container.top-nav {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .container.bottom-nav {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
+
+.container.login {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.container.login h2 {
+  color: #5680ca;
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.container.login h4 {
+  color: #5680ca;
+  font-size: 1.5rem;
+}
+
+.row.separator {
+  height: 1rem;
+}
+
