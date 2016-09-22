@@ -21,19 +21,18 @@ var app = {
       newFrame.addClass('moving').css({top: scrollTop, height: winHeight}).removeClass('hidden');
 
       var animationComplete = function () {
-        oldFrame.attr('scroll', scrollTop);
-        alert(scrollTop);
+        //oldFrame.attr('scroll', scrollTop);
         onComplete(oldFrame, newFrame);
       };
 
-      newFrame.animate({left: '0'}, {duration: 300, complete: animationComplete});
+      newFrame.animate({left: '0'}, {duration: 400, complete: animationComplete});
     };
 
     var complete = function (oldFrame, newFrame) {
       if (oldFrame) oldFrame.addClass('hidden').removeAttr('style');
 
       newFrame.attr('id', frameName).removeClass('moving').addClass('current').removeAttr('style');
-      if (newFrame.attr('scroll')) $(window).scrollTop(newFrame.attr('scroll'));
+      //if (newFrame.attr('scroll')) $(window).scrollTop(newFrame.attr('scroll'));
 
       body.css('overflow', 'auto');
     };
