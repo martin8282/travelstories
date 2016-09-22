@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+}
+
+@keyframes nav-top-margin-show {
+    from { margin-top: 0; }
+    to { margin-top: 50px; }
+}
+
+.main-container.show-top {
+    margin-top: 50px;
+    animation-name: nav-top-margin-show;
+    animation-duration: 0.5s;
+}
+
+/* top navbar */
+@keyframes nav-top-show {
+    from { top: -50px; }
+    to { top: 0; }
+}
+
+.navbar-fixed-top.show {
+    animation-name: nav-top-show;
+    animation-duration: 0.5s;
+}
+
+/* bottom navbar */
+
+@keyframes nav-bottom-show {
+    from { bottom: -50px; }
+    to { bottom: 0; }
+}
+
+.navbar-fixed-bottom.show {
+    animation-name: nav-bottom-show;
+    animation-duration: 0.5s;
+}

@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.frame {
+    position: absolute;
+    background-color: white;
+    min-width: 100%;
+    z-index: 0;
+}
+
+.frame.moving {
+    left: 100%;
+    overflow: hidden;
+    z-index: 10;
+    -webkit-box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.4);
+    box-shadow: -5px 0px 5px 0px rgba(0,0,0,0.4);
+}
+
+.frame.moving .navbar {
+    position: absolute;
+}
+
+.frame.current {
+    left: 0;
+    z-index: 10;
+    border: none;
+}
+
+.frame.hidden {
+    left: 200%;
+    display: none;
+}
+
+.container.top-nav {
+    margin-top: 50px;
+}
+
+.container.bottom-nav {
+    margin-bottom: 50px;
+}
