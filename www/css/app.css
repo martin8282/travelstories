@@ -5,19 +5,11 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  height: 90px;
-  min-width: 100%;
-  background: transparent url("../img/texture.png") repeat-x 0 100%;
-}
-
 .frame {
   position: absolute;
   background-color: white;
   min-width: 100%;
-  z-index: 0;
+  z-index: 5;
   font-size: 1.5rem;
 }
 
@@ -31,10 +23,6 @@ body {
 }
 
 .frame.moving .navbar {
-  position: absolute;
-}
-
-.frame.moving .footer {
   position: absolute;
 }
 
@@ -75,6 +63,7 @@ body {
 .container.login h4 {
   color: #5680ca;
   font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 .row.separator {
