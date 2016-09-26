@@ -87,7 +87,7 @@ var app = {
         .addClass('current')
         .removeAttr('style');
 
-      //body.css('overflow', 'auto');
+      newFrame.find('.container').on('click', app.hideMenu);
 
       if (pageName != app.currentPage()) {
         app.currentPage(pageName);
@@ -99,8 +99,6 @@ var app = {
     };
 
     var process = function(newFrame) {
-      //body.css('overflow', 'hidden');
-
       var oldFrame = $('.frame.current');
 
       if (oldFrame.length) {
@@ -123,6 +121,34 @@ var app = {
   navigateBack: function() {
     var prevPage = app.get(consts.KEY_PREVIOUS_PAGE);
     if (prevPage != null && app.currentPage() != prevPage) app.navigateTo(prevPage);
+  },
+
+  toggleMenu: function() {
+    var menu = $('.menu-frame');
+    var menuIcon = $('.glyphicon-menu-hamburger');
+
+    var opened = parseInt(menu.css('left')) == 0;
+    if (!opened) {
+      var winHeight = $(window).height();
+      menu.css({top: 50, height: winHeight - 50})
+        .bind('touchstart', function() { alert('touch') });
+    }
+
+    var slide = function() {
+      var menuSlide = opened ? {left: '-100%'} : {left: '0'};
+      menu.animate(menuSlide, {duration: 400});
+
+      var iconSlide = opened ? {left: '0'} : {left: '-20px'};
+      menuIcon.animate(iconSlide, {duration: 400});
+    };
+
+    slide();
+  },
+
+  hideMenu: function() {
+    var menu = $('.menu-frame');
+    var opened = parseInt(menu.css('left')) == 0;
+    if (opened) app.toggleMenu();
   }
 };
 
