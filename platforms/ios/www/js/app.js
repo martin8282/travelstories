@@ -130,6 +130,7 @@ var app = {
     var opened = parseInt(menu.css('left')) == 0;
     if (!opened) {
       var winHeight = $(window).height();
+
       menu.css({top: 50, height: winHeight - 50})
         .bind('touchstart', function() { alert('touch') });
     }
